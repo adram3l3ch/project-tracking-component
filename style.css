@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap");
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Barlow Condensed", sans-serif;
+}
+
+.container {
+    width: 80vw;
+    height: 100vh;
+    max-width: 1920px;
+    padding: 2rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.design {
+    position: absolute;
+    inset: 0 0 45% 50%;
+    background-color: hsl(207, 33%, 95%);
+    z-index: -2;
+    border-radius: 0 0 0 4rem;
+}
+
+.illustration {
+    position: fixed;
+    z-index: -1;
+    left: 51%;
+    top: 50%;
+    transform: translateY(-40%);
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 2rem;
+    right: 2rem;
+    display: flex;
+    padding-block: 4rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navlinks {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    align-items: center;
+}
+
+.navlink {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: hsl(230, 29%, 20%);
+    cursor: pointer;
+}
+
+.navlink:hover {
+    text-decoration: underline;
+}
+
+.navlink.login {
+    color: hsl(231, 7%, 65%);
+}
+
+main {
+    width: 50%;
+    margin-top: 2rem;
+    padding-right: 1rem;
+}
+
+.tag {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.new {
+    padding: 0.25em 0.75em;
+    background-color: hsl(230, 29%, 20%);
+    color: white;
+    text-transform: uppercase;
+    border-radius: 10rem;
+}
+
+.db {
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: hsl(231, 7%, 65%);
+}
+
+.title {
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: hsl(230, 29%, 20%);
+    margin-bottom: 2rem;
+    line-height: 1em;
+}
+
+.desc {
+    font-size: 1.4rem;
+    color: hsl(230, 11%, 40%);
+    margin-bottom: 4rem;
+    width: 50%;
+}
+
+.btn {
+    border: none;
+    background-color: hsl(0, 100%, 68%);
+    padding: 1em 2em;
+    font-family: inherit;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: 0.25em;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn:hover {
+    opacity: 0.7;
+}
+
+.btn-right {
+    margin-left: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: hsl(230, 11%, 40%);
+}
+
+.dot {
+    width: 0.3rem;
+    aspect-ratio: 1;
+    background-color: hsl(231, 7%, 65%);
+    border-radius: 50%;
+}
+
+@media (max-width: 800px) {
+    :root {
+        font-size: calc(1rem - 2px);
+    }
+    .container {
+        flex-direction: column;
+        width: 100%;
+        height: min-content;
+    }
+    .header {
+        position: fixed;
+    }
+    main {
+        width: 100%;
+    }
+    .illustration {
+        position: relative;
+        transform: none;
+        width: 100%;
+        margin-block: 15rem 5rem;
+        inset: 0;
+    }
+    .title {
+        font-size: 3rem;
+        padding: 0;
+    }
+
+    .desc {
+        width: 100%;
+    }
+
+    .navlinks {
+        display: none;
+    }
+}
